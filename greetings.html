@@ -40,7 +40,7 @@
         let clickGreetClass = () => {
             let name = document.getElementById('nameClass').value;
             let age = document.getElementById('ageClass').value;
-            let res = isNaN(age)?"Invalid age":(age<21? "You're so young!":(age<70?"You're in a right age :)":"You're a senior."))
+            let res = (age==='' || isNaN(age))?"Invalid age":(age<21? "You're so young!":(age<70?"You're in a right age :)":"You're a senior."))
             class ClickClassComp extends React.Component{
                 render(){
                     return (<div class="d-flex flex-column align-items-center justify-content-center"><h1>Hello {name}</h1>
@@ -64,7 +64,7 @@
         let clickGreetFun = () =>{
             let name = document.getElementById('nameFun').value;
             let age = document.getElementById('ageFun').value;
-            let res = isNaN(age)?"Invalid age":(age<21? "You're so young!":(age<70?"You're in a right age :)":"You're a senior."))
+            let res = (age==='' || isNaN(age))?"Invalid age":(age<21? "You're so young!":(age<70?"You're in a right age :)":"You're a senior."))
             let ClickFunComp = () => {
             return (<div class="d-flex flex-column align-items-center justify-content-center"><h1>Hello {name}</h1>
                 <h3>{res}</h3> </div>);
